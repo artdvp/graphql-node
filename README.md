@@ -49,3 +49,48 @@ query {
   }
 }
 ```
+
+### Mutation
+
+> Insert
+
+```
+mutation {
+  post(
+    url: "www.prisma.io",
+    description: "Prisma turns your database into a GraphQL API"
+  ) {
+    id
+  }
+}
+```
+
+> Update
+
+```
+mutation {
+  updateLink(
+    id: "link-6",
+  	description: "ddd",
+    url: "www.bing.com"
+  ) {
+    id
+    description
+    url
+  }
+}
+```
+
+> Delete
+
+```
+mutation {
+  deleteLink(
+    id: "link-3"
+  ) {
+    id
+    description
+    url
+  }
+}
+```
