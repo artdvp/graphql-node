@@ -13,3 +13,39 @@
     - … auto-generates a comprehensive documentation for all available API operations.
     - … provides an editor where you can write queries, mutations & subscriptions, with auto-completion(!) and syntax highlighting.
     - … lets you easily share your API operations.
+
+### Installation
+
+```sh
+$ yarn init -y
+$ yarn add graphql-yoga
+
+```
+
+### Run
+
+```sh
+$ node src/index.js
+```
+
+### Query
+
+Query 1
+
+```
+query {
+  info
+}
+```
+
+Query 2
+
+```
+query {
+  feed {
+    id
+    url
+    description
+  }
+}
+```
