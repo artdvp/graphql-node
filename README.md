@@ -125,3 +125,39 @@ $ prisma deploy
 
 $ prisma info
 ```
+
+in Playground >> HTTP HEADERS
+
+```
+{
+  "Authorization": "Bearer __TOKEN__"
+}
+```
+
+After access GraphQL Then
+
+>> Create 
+
+```
+mutation {
+  createLink(data: {
+    url: "www.prisma.io"
+    description: "Prisma turns your database into a GraphQL API"
+  }) {
+    id
+  }
+}
+```
+
+>> Query
+
+```
+query	{
+  links {
+    id
+    url
+    description
+    createdAt
+  }
+}
+```
