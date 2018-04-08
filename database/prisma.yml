@@ -8,5 +8,5 @@ stage: dev
 datamodel: datamodel.graphql
 
 # You can only access the API when providng JWTs that are signed with this secret
-secret: secret
+secret: process.env.PRISMA_SECRET
 cluster: public-southpalm-856/prisma-eu1

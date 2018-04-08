@@ -161,3 +161,21 @@ query	{
   }
 }
 ```
+
+### Install prisma-binding
+
+```
+$ yarn add prisma-binding
+```
+
+### Downloading the Prisma database schema
+
+```
+$  touch .graphqlconfig.yml
+```
+
+### deploy
+
+```
+$ prisma deploy
+```
