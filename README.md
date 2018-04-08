@@ -113,8 +113,10 @@ mutation {
 
 ### Install Prisma CLI
 
-```
-$ yarn global add prisma
+```sh
+$ npm install -g prisma
+
+# because yarn has a problem for global
 ```
 
 ### Deploy Prisma
@@ -178,4 +180,16 @@ $  touch .graphqlconfig.yml
 
 ```
 $ prisma deploy
+```
+
+### Install GraphQL CLI
+
+```sh
+$ npm install -g graphql-cli
+```
+
+### Run graphql
+
+```sh
+$ graphql playground
 ```
