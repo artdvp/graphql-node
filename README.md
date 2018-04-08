@@ -28,6 +28,22 @@ $ yarn add graphql-yoga
 $ node src/index.js
 ```
 
+### View Type in GraphQL
+
+```
+{
+  __schema {
+    queryType {
+      name
+      fields {
+        name
+        description
+      }
+    }
+  }
+}
+```
+
 ### Query
 
 Query 1
@@ -93,4 +109,19 @@ mutation {
     url
   }
 }
+```
+
+### Install Prisma CLI
+
+```
+$ yarn global add prisma
+```
+
+### Deploy Prisma
+
+```
+$ cd database
+$ prisma deploy
+
+$ prisma info
 ```
