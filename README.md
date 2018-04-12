@@ -193,3 +193,5 @@ $ npm install -g graphql-cli
 ```sh
 $ graphql playground
 ```
+
+### Add Authen
