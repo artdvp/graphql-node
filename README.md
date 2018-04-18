@@ -195,3 +195,61 @@ $ graphql playground
 ```
 
 ### Add Authen
+
+signup
+
+```
+mutation {
+  signup(
+    name: "Alice"
+    email: "alice@graph.cool"
+    password: "graphql"
+  ) {
+    token
+    user {
+      id
+    }
+  }
+}
+```
+
+add token 
+
+```
+{
+  "Authorization": "Bearer __TOKEN__"
+}
+```
+
+post
+
+```
+mutation {
+  post(
+    url: "www.graphql-europe.org"
+    description: "Europe's biggest GraphQL conference"
+  ) {
+    id
+  }
+}
+```
+
+login
+
+```
+mutation	{
+  login(
+    email: "mail@mail.com"
+    password: "password"
+  ) {
+    token
+    user {
+      email 
+      links {
+        url
+        description
+      }
+    }
+  }
+}
+```
