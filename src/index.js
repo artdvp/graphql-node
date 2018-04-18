@@ -3,11 +3,15 @@ const { Prisma } = require("prisma-binding");
 const Query = require("./resolvers/Query");
 const Mutation = require("./resolvers/Mutation");
 const AuthPayload = require("./resolvers/AuthPayload");
+const Subscription = require("./resolvers/Subscription");
+const Feed = require("./resolvers/Feed");
 
 const resolvers = {
   Query,
   Mutation,
-  AuthPayload
+  AuthPayload,
+  Subscription,
+  Feed
 };
 
 const server = new GraphQLServer({
@@ -20,8 +24,8 @@ const server = new GraphQLServer({
       endpoint: "https://eu1.prisma.sh/public-southpalm-856/graphql-node/dev",
       secret: process.env.PRISMA_SECRET,
       debug: true
-    }),
-  }),
+    })
+  })
 });
 
 server.start(() => console.log(`Server is running on http://localhost:4000`));

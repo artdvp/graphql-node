@@ -253,3 +253,44 @@ mutation	{
   }
 }
 ```
+
+### Realtime GraphQL Subscriptions
+
+```
+subscription {
+  newLink {
+    node {
+      id
+      url
+      description
+      postedBy {
+        id
+        name
+        email
+      }
+    }
+  }
+}
+```
+
+subscribe newVote
+
+```
+subscription {
+  newVote {
+    node {
+      link {
+        url
+        description
+      }
+      user {
+        name
+        email
+      }
+    }
+  }
+}
+```
+
+### Filtering, Pagination & Sorting
+
